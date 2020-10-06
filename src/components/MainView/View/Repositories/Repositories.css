@@ -38,6 +38,13 @@
   padding: 10px;
 }
 
+@media only screen and (max-width: 600px) {
+  .repo__content {
+    grid-template-columns: 2fr 1fr;
+    width: 80%;
+  }
+}
+
 .repo__stats {
   display: flex;
   flex-direction: column;

@@ -14,7 +14,7 @@ export const getGitUsers = () => async (dispatch) => {
     const res = await axios.get("https://api.github.com/users", {
       auth: {
         username: "ajai1",
-        password: "b69891479fae5e706953785b7149455917095db3",
+        password: "b486550e851d2e44c8bf7b2e43add28d6f1d2228",
       },
     });
     dispatch({
@@ -31,7 +31,7 @@ export const getUserRepo = (url) => async (dispatch) => {
     const res = await axios.get(url, {
       auth: {
         username: "ajai1",
-        password: "b69891479fae5e706953785b7149455917095db3",
+        password: "b486550e851d2e44c8bf7b2e43add28d6f1d2228",
       },
     });
     dispatch({
@@ -47,7 +47,7 @@ export const getOwner = (owner) => async (dispatch) => {
   const res = await axios.get(`https://api.github.com/users/${owner}`, {
     auth: {
       username: "ajai1",
-      password: "b69891479fae5e706953785b7149455917095db3",
+      password: "b486550e851d2e44c8bf7b2e43add28d6f1d2228",
     },
   });
   dispatch({
@@ -84,7 +84,7 @@ export const getGitRepoAndContributor = (repo, url) => async (dispatch) => {
       const res = await axios.get(url, {
         auth: {
           username: "ajai1",
-          password: "b69891479fae5e706953785b7149455917095db3",
+          password: "b486550e851d2e44c8bf7b2e43add28d6f1d2228",
         },
       });
       dispatch({

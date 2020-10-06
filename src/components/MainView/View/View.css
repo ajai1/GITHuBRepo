@@ -21,3 +21,14 @@
 .user__details {
   flex-direction: column;
 }
+
+@media only screen and (max-width: 600px) {
+  .user__details__container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .user__details {
+    text-align: center;
+  }
+}
