@@ -8,15 +8,12 @@ import {
   GET_FAV_REPO,
   REMOVE_FAV_REPO,
 } from "../Constants/types";
-
+import { gitHubClientID, gitHubClientSecret } from "../Constants/config";
 export const getGitUsers = () => async (dispatch) => {
   try {
-    const res = await axios.get("https://api.github.com/users", {
-      auth: {
-        username: "ajai1",
-        password: "b486550e851d2e44c8bf7b2e43add28d6f1d2228",
-      },
-    });
+    const res = await axios.get(
+      `https://api.github.com/users?${gitHubClientID}${gitHubClientSecret}`
+    );
     dispatch({
       type: GET_GIT_USERS,
       payload: res.data,
@@ -28,12 +25,9 @@ export const getGitUsers = () => async (dispatch) => {
 
 export const getUserRepo = (url) => async (dispatch) => {
   try {
-    const res = await axios.get(url, {
-      auth: {
-        username: "ajai1",
-        password: "b486550e851d2e44c8bf7b2e43add28d6f1d2228",
-      },
-    });
+    const res = await axios.get(
+      url + `?${gitHubClientID}${gitHubClientSecret}`
+    );
     dispatch({
       type: GET_USER_REPO,
       payload: res.data,
@@ -44,12 +38,9 @@ export const getUserRepo = (url) => async (dispatch) => {
 };
 
 export const getOwner = (owner) => async (dispatch) => {
-  const res = await axios.get(`https://api.github.com/users/${owner}`, {
-    auth: {
-      username: "ajai1",
-      password: "b486550e851d2e44c8bf7b2e43add28d6f1d2228",
-    },
-  });
+  const res = await axios.get(
+    `https://api.github.com/users/${owner}?${gitHubClientID}${gitHubClientSecret}`
+  );
   dispatch({
     type: GET_OWNER,
     payload: res.data,
@@ -81,12 +72,9 @@ export const getFavouriteRepos = () => async (dispatch) => {
 export const getGitRepoAndContributor = (repo, url) => async (dispatch) => {
   if (url) {
     try {
-      const res = await axios.get(url, {
-        auth: {
-          username: "ajai1",
-          password: "b486550e851d2e44c8bf7b2e43add28d6f1d2228",
-        },
-      });
+      const res = await axios.get(
+        url + `?${gitHubClientID}${gitHubClientSecret}`
+      );
       dispatch({
         type: GET_REPO_CONTRIBUTORS,
         payload: { repo: repo, contributors: res.data },
