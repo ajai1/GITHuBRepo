@@ -1,0 +1,17 @@
+.detailContainer {
+  padding: 1rem 1rem;
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.detailContainer:hover {
+  background-color: #d4e157;
+  cursor: pointer;
+}
+.detailContainer h4 {
+  font-family: sans-serif;
+}

@@ -1,0 +1,40 @@
+.favouritesContainer {
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.favouritesContainer_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.favouritesContainer_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  overflow-y: scroll;
+}
+
+.fav_container {
+  padding: 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.fav_container:hover {
+  background-color: #d4e157;
+}
